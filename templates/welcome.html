@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    {% if avatar %}
+        <img src="{{ avatar }}" alt="Аватар" width="200" height="200">
+    {% endif %}
+    <h2>Добро пожаловать, {{ username }}!</h2>
+
+    <a href="/main/{{ username }}" class="btn">Перейти на главную</a>
+
+    {% if role == "admin" %}
+        <a href="/register" class="btn">Зарегистрировать пользователя</a>
+    {% endif %}
+
+    <br><br>
+    <a href="/logout">Выйти</a>
+<script>
+    let logoutTimer;
+
+    function resetTimer() {
+        clearTimeout(logoutTimer);
+        logoutTimer = setTimeout(() => {
+            window.location.href = "/logout";
+        }, 180000);
+    }
+
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+    document.onscroll = resetTimer;
+</script>
+</body>
+</html>

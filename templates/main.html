@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <img src="/assets/logo.svg" alt="Logo">
+            <h2>Добро пожаловать, {{ username }}!</h2>
+            <div class="header-links">
+                <a class="header-link" href="#works">Репродукции</a>
+                <a class="header-link" href="#">Новинки</a>
+                <a class="header-link" href="#">О нас</a>
+                {% if role == "admin" %}
+                    <a class="header-link" href="/login?next=register">Регистрация</a>
+                {% endif %}
+                <a class="header-link" href="/logout">Выйти</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container about">
+                <img src="/assets/bird.jpg" alt="Bird" class="bbird">
+                <div class="about-right">
+                    <h1 class="about-title">
+                        Реплики картин от <span>Ink. House</span>
+                    </h1>
+                    <p class="about-text">
+                        Высокое качество отрисовки на плотной бумаге 
+                        или льняном холсте. Редкие произведения, доступные цены. 
+                    </p>
+                    <button class="about-button">Продукция</button>
+                </div>
+            </div>
+        </section>
+        <section id="works">
+            <div class="container">
+                <div class="works-up">
+                    <h2 class="works-title">Репродукции</h2>
+                    <div>
+                        <button class="works-button works-button-active">Франция</button>
+                        <button class="works-button">Германия</button>
+                        <button class="works-button">Англия</button>
+                    </div>
+                </div>
+                <div class="works-down">
+                    <div class="work-item">
+                        <img class="work-img" src="/assets/work.jpg" alt="first work">
+                        <p class="work-artist">Марсель Руссо</p>
+                        <p class="work-name">Охота Амура</p>
+                        <p class="work-info">Холст, масло (50х80) </p>
+                        <p class="work-price">14 500 руб</p>
+                        <button class="work-buy about-button">В корзину</button>
+                    </div>
+                    <div class="work-item">
+                        <img class="work-img" src="/assets/work.jpg" alt="first work">
+                        <p class="work-artist">Марсель Руссо</p>
+                        <p class="work-name">Охота Амура</p>
+                        <p class="work-info">Холст, масло (50х80) </p>
+                        <p class="work-price">14 500 руб</p>
+                        <button class="work-buy about-button">В корзину</button>
+                    </div>
+                    <div class="work-item">
+                        <img class="work-img" src="/assets/work.jpg" alt="first work">
+                        <p class="work-artist">Марсель Руссо</p>
+                        <p class="work-name">Охота Амура</p>
+                        <p class="work-info">Холст, масло (50х80) </p>
+                        <p class="work-price">14 500 руб</p>
+                        <button class="work-buy about-button">В корзину</button>
+                    </div>
+                    <div class="work-item">
+                        <img class="work-img" src="/assets/work.jpg" alt="first work">
+                        <p class="work-artist">Марсель Руссо</p>
+                        <p class="work-name">Охота Амура</p>
+                        <p class="work-info">Холст, масло (50х80) </p>
+                        <p class="work-price">14 500 руб</p>
+                        <button class="work-buy about-button">В корзину</button>
+                    </div>
+                    <div class="work-item">
+                        <img class="work-img" src="/assets/work.jpg" alt="first work">
+                        <p class="work-artist">Марсель Руссо</p>
+                        <p class="work-name">Охота Амура</p>
+                        <p class="work-info">Холст, масло (50х80) </p>
+                        <p class="work-price">14 500 руб</p>
+                        <button class="work-buy about-button">В корзину</button>
+                    </div>
+                    <div class="work-item">
+                        <img class="work-img" src="/assets/work.jpg" alt="first work">
+                        <p class="work-artist">Марсель Руссо</p>
+                        <p class="work-name">Охота Амура</p>
+                        <p class="work-info">Холст, масло (50х80) </p>
+                        <p class="work-price">14 500 руб</p>
+                        <button class="work-buy about-button">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="new-collection">
+            <div class="container">
+                <div class="new-collection-title">
+                    <img src="/assets/Star 2.png" alt="star icon">
+                    <h2>Новая коллекция французских авторов</h2>
+                </div>
+                <p class="new-collection-text">
+                    Сложно сказать, почему акционеры крупнейших 
+                    компаний призывают нас к новым свершениям, 
+                    которые, в свою очередь, должны быть 
+                    заблокированы в рамках своих собственных 
+                    рациональных ограничений. 
+                </p>
+                <p class="new-collection-text">
+                    Принимая во внимание показатели успешности, 
+                    граница обучения кадров предопределяет высокую
+                    востребованность направлений прогрессивного 
+                    развития.
+                </p>
+                <button class="new-collection-button">Ознакомиться</button>
+            </div>
+        </section>
+        <section id="team">
+            <div class="container team">
+                <img src="/assets/Group 210.svg" alt="jlfdf">
+                <div class="team-info">
+                    <h2>Наша команда</h2>
+                    <p>
+                        Значимость этих проблем настолько 
+                        очевидна, что базовый вектор развития 
+                        позволяет оценить значение экспериментов, 
+                        поражающих по своей масштабности и 
+                        грандиозности. Мы вынуждены отталкиваться 
+                        от того, что консультация с широким активом.
+                    </p>
+                    <div>
+                        <img class="team-image" src="/assets/Ellipse 30.png" alt="profile">
+                        <img class="team-image" src="/assets/Ellipse 31.jpg" alt="profile">
+                        <img class="team-image" src="/assets/Ellipse 32.jpg" alt="profile">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div>
+                <img class="footer-logo" src="/assets/logo.svg">
+                <div>
+                    <p class="footer-contacts">+7 (999) 543-54-54</p>
+                    <p class="footer-text">Мастерская</p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <div class="footer-links">
+                    <div class="footer-link">
+                        <h3>Репродукции</h3>
+                        <a href="#">Франция</a>
+                        <a href="#">Германия</a>
+                        <a href="#">Англия</a>
+                    </div>
+                    <div class="footer-link">
+                        <h3>Новинки</h3>
+                        <a href="#">2021</a>
+                        <a href="#">2020</a>
+                    </div>
+                    <div class="footer-link">
+                        <h3>О нас</h3>
+                        <a href="#">Художники</a>
+                        <a href="#">Менеджеры</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-socials">
+                        <a href="#"><img src="/assets/Vector.svg"></a>
+                        <a href="#"><img src="/assets/Vector (1).svg"></a>
+                        <a href="#"><img src="/assets/Vector (2).svg"></a>
+                    </div>
+                    <p class="footer-socials-text">Ink. House ®</p>
+                    <p class="footer-socials-text">All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+    let logoutTimer;
+
+    function resetTimer() {
+        clearTimeout(logoutTimer);
+        logoutTimer = setTimeout(() => {
+            window.location.href = "/logout";
+        }, 180000);
+    }
+
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+    document.onscroll = resetTimer;
+</script>
+</body>
+</html>
